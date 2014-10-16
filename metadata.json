@@ -1,0 +1,28 @@
+{
+  "author": "iNet Process",
+  "dependencies": [],
+  "license": "Apache-2.0",
+  "name": "inet-git",
+  "operatingsystem_support": [
+      {
+          "operatingsystem": "Ubuntu",
+          "operatingsystemrelease": [ "14.04", "12.04", "10.04" ]
+      },
+      {
+          "operatingsystem": "Debian",
+          "operatingsystemrelease": [ "6.x", "7.x" ]
+      }
+  ],
+  "project_page": "https://github.com/rsauvatinet/puppet-git",
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": "3.x"
+    }
+  ],
+  "source": "https://github.com/rsauvatinet/puppet-git.git",
+  "issues": "https://github.com/rsauvatinet/puppet-git/issues",
+  "summary": "Git client installation and configuration",
+  "tags": ["git"],
+  "version": "0.1.0"
+}
