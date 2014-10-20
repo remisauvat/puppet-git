@@ -49,8 +49,16 @@ git_config:
     color.ui:
         value: auto
         user: foobar
-    alias.ci
+    alias.ci:
         value: commit
+    alias.add_hooks
+        user: foo
+        dir: '/var/www'
+        value: ".hooks/add_hooks.sh"
+    alias.stop
+        ensure: absent
+        zone: global
+        user: bar
 ```
 
 ## Reference
@@ -97,6 +105,7 @@ git::config { 'color.ui':
 
 git::config { 'color.ui':
   value => true,
+  user  => bar,
 }
 ```
 
