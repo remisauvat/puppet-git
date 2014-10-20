@@ -60,6 +60,8 @@ define git::config (
   $zone     = undef,
 ) {
 
+  include $::git::params
+
   $_zone_tpl = "<%=
   unless @dir
     if @zone
@@ -74,7 +76,7 @@ define git::config (
   end
   -%>"
   # Login as the specified user to set the HOME variable
-  $command_prefix = "su -l -c \"git config "
+  $command_prefix = "${::git::params::su} -l -c \"${::git::params::bin} config "
   $command_suffix = "\" '<%= @user ? @user : 'root' %>'"
 
   # Various commands 
@@ -98,7 +100,7 @@ define git::config (
     onlyif   => $onlyif,
     unless   => $unless,
     cwd      => $dir,
-    require  => Package['git-core'],
+    require  => Package[$::git::params::package_name],
   }
 }
 
