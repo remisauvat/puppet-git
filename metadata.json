@@ -29,5 +29,5 @@
   "issues": "https://github.com/rsauvatinet/puppet-git/issues",
   "summary": "Git client installation and configuration",
   "tags": ["git"],
-  "version": "0.1.0"
+  "version": "1.0.0"
 }
