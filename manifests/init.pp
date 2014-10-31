@@ -39,7 +39,7 @@
 #
 class git (
   $package_name = $::git::params::package_name,
-  $git_config = hiera_hash('gitconfig', {}),
+  $git_config = hiera_hash('git_config', {}),
 ) inherits git::params {
 
     validate_hash($git_config)
